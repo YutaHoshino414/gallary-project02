@@ -1,18 +1,54 @@
 import styles from '../../styles/Works.module.css'
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import Link from 'next/link';
 
 
-const Works = () => {
+const Works = ({works}) => {
+  console.log(works)
+
     return ( 
         <div className={styles.works}>
-        <div className={styles.main}>
-            <h1>works page</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, 
-            nobis commodi! Et, beatae. Quidem, fugit. Excepturi quae, cupiditate 
-            quaerat impedit laudantium, nesciunt vel tempora fugit officiis consectetur 
-            similique voluptas vero.</p>
+          <h2>ALL</h2>
+        <div className={styles.card_wrapper}>
+            {works.map((work,i) => (
+              <Link href={`/works/${work.slug}`} >
+              <div className={styles.card} key={i}>
+                <h3>{work.frontmatter.title}</h3>
+
+              </div></Link>
+            ))}
         </div>
     </div>
     );
 }
 
 export default Works;
+
+export async function getStaticProps(){
+  const mdFiles = fs.readdirSync(path.join('markdown'))
+  console.log('inside:', mdFiles)
+  const works = mdFiles.map(filename =>{
+    // slug(endpoint)
+    const slug = filename.replace('.md', '')
+
+    const markdownWithMeta = fs.readFileSync(
+      path.join('markdown', filename), 'utf-8'
+    );
+
+    const {data: frontmatter} = matter(markdownWithMeta)
+
+    return {
+      slug,
+      frontmatter,
+    }
+  })
+  
+
+  return {
+      props:{
+          works: works
+      },
+  }
+}

@@ -1,14 +1,19 @@
 import Link from "next/link";
+/** @jsxImportSource @emotion/react */ 
+import { css } from '@emotion/react';
+
+const nav = css`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+`
 
 const Nabvar = () => {
     return ( 
-        <nav>
+        <nav css={nav}>
             <div className="logo">
-                <h1>Ninja List</h1>
+                <h1>Comp List</h1>
             </div>
-            <Link href="/"><a>Home</a></Link>
-            <Link href="/about"><a>About</a></Link>
-            <Link href="/ninjas"><a>Ninja List</a></Link>
         </nav>
     );
 }
