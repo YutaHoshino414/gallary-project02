@@ -19,10 +19,10 @@ const list_item = css`
 export default props => {
     return ( 
         <Menu width={ 280 }  {...props}>
-            <div css={title}>
+            <div>
                 <h1>Next Gallary</h1>
             </div><br/>
-            <div>
+            <div css={list_item}>
                 <ul>
                     <li><Link href="/"><a>Home</a></Link></li>
                     <li><Link href="/about"><a>About</a></Link></li>
