@@ -16,7 +16,7 @@ const list_item = css`
     }
 `
 
-export default props => {
+const SideMenu = props => {
     return ( 
         <Menu width={ 280 }  {...props}>
             <div>
@@ -34,3 +34,4 @@ export default props => {
     );
 }
 
+export default SideMenu;
