@@ -12,7 +12,7 @@ const Nabvar = () => {
     return ( 
         <nav css={nav}>
             <div className="logo">
-                <h1>Comp List</h1>
+                
             </div>
         </nav>
     );

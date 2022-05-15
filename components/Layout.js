@@ -8,7 +8,6 @@ const Layout = ({children}) => {
         <div id="outer-container">
             <Menu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } />
             <div className="container" id="page-wrap">
-                <Nabvar />
                 {children}
             </div>
                 <Footer />

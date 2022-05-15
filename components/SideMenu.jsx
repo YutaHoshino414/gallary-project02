@@ -3,25 +3,34 @@ import Link from "next/link";
 /** @jsxImportSource @emotion/react */ 
 import { css } from '@emotion/react';
 
-
+const title = css`
+    width: 100%;
+    height: 80px;
+    padding: 40px 20px 10px;
+    background-color: rgb(17, 38, 105);
+    h1{
+        color: #c5ac1c;
+    }
+`
 const list_item = css`
-    margin-top: 50px;
+    margin-top: 0px;
+    padding: 30px;
     li{
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         font-weight: 600;
-        font-size: 24px;
+        font-size: 20px;
     }
     a:hover{
-        color: #1d629b;
+        color: #29a4dd;
     }
 `
 
 const SideMenu = props => {
     return ( 
-        <Menu width={ 280 }  {...props}>
-            <div>
-                <h1>Next Gallary</h1>
-            </div><br/>
+        <Menu width={ 260 }  {...props}>
+            <div css={title}>
+                <h1>React Gallary</h1>
+            </div>
             <div css={list_item}>
                 <ul>
                     <li><Link href="/"><a>Home</a></Link></li>

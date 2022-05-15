@@ -16,15 +16,17 @@ body {
   height: 100vh;
   margin: 0 auto;
 }
+@media (max-width: 1280px) {
+  .container{width: 80%;}
+}
 ul{
   list-style: none;
 }
 
 a {
-  color: rgb(250, 250, 250);
+  color: aliceblue;
   text-decoration: none;
 }
-
 
 footer {
   display: block;
@@ -77,8 +79,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  background: rgb(17, 38, 105);
-  padding: 2.5em 1.5em 0;
+  background: rgb(30, 48, 110);
   font-size: 1.15em;
   
 }
@@ -86,19 +87,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
   fill: #373a47;
-}
-
-/* Wrapper for item list */
-.bm-item-list {
-  color: #b8b7ad;
-  padding: .8em;
-}
-
-/* Individual item */
-.bm-item {
-  display: inline-block;
-  text-decoration: none;
-  outline: none;
 }
 
 /* Styling of overlay */
