@@ -7,7 +7,7 @@ const title = css`
     width: 100%;
     height: 80px;
     padding: 40px 20px 10px;
-    background-color: rgb(17, 38, 105);
+    
     h1{
         color: #c5ac1c;
     }
@@ -25,9 +25,11 @@ const list_item = css`
     }
 `
 
+
+
 const SideMenu = props => {
     return ( 
-        <Menu width={ 260 }  {...props}>
+        <Menu width={ 260 }  {...props} >
             <div css={title}>
                 <h1>React Gallary</h1>
             </div>

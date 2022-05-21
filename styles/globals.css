@@ -6,19 +6,19 @@
   
 }
 body {
-  background: linear-gradient(to top,#b9c6d2 0%,#d0dde9 10.45%,#edf0f8 41.35%);
   color: #333;
   font-family: "Nunito";
 }
 
 .container {
-  width: 1080px;
-  height: 100vh;
+  background: linear-gradient(to top,#b9c6d2 0%,#d0dde9 10.45%,#edf0f8 41.35%);
+  /* width: 1080px; */
+  min-height: 100vh;
   margin: 0 auto;
 }
-@media (max-width: 1280px) {
+/* @media (max-width: 1280px) {
   .container{width: 80%;}
-}
+} */
 ul{
   list-style: none;
 }
@@ -35,9 +35,17 @@ footer {
   margin-top: 0px;
   color: #777;
   background-color: #333;
+  position:absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 /* burger-menu */
+
+#outer-container{
+  background-color: #373a47;
+}
+
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
@@ -81,7 +89,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-menu {
   background: rgb(30, 48, 110);
   font-size: 1.15em;
-  
 }
 
 /* Morph shape necessary with bubble or elastic */

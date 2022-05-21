@@ -10,6 +10,9 @@ const Works = ({works}) => {
 
     return ( 
         <div className={styles.works}>
+          <div className={styles.title}>
+            <h1>Works</h1>
+          </div>
           <h2>ALL</h2>
         <div className={styles.card_wrapper}>
             {works.map((work,i) => (
