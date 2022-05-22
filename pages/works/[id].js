@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { useState } from 'react';
 import Link from 'next/link'
+import Markdown from 'markdown-to-jsx';
 import Complist from '../../components/works/CompList'
 import styles from '../../styles/Works.module.css'
 
@@ -33,12 +34,9 @@ const Work = ({markdown}) => {
                 </div>
 
                 <div className={toggleState === 2 ? "content  active-content" : "content"}>
-                    <h2>Content 2</h2>
-                    <hr />
-                    <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-                    voluptatum qui adipisci.
-                    </p>
+                    <Markdown >
+                        {markdown.content}
+                    </Markdown>
                 </div>
             </div>
         </div>

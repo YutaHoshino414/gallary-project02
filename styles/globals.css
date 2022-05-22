@@ -41,6 +41,14 @@ footer {
   width: 100%;
 }
 
+pre{
+  background-color: #373a47;
+  color: #b9c6d2;
+  padding: 20px;
+  border-radius: 10px;
+  width: 700px;
+}
+
 /* burger-menu */
 
 #outer-container{

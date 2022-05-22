@@ -5,9 +5,6 @@ excerpt: 'This is test excerpt of example01'
 type: ''
 ---
 
-# Code
-
----
 
 ```
 import {motion} from 'framer-motion';

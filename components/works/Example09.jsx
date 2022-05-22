@@ -4,7 +4,7 @@ import { css } from "@emotion/react";
 
 
 const example09 = css`
-    width: 80%;
+    width: 90%;
     .gutter {
     background-color: rgb(0, 0, 0);
     background-repeat: no-repeat;

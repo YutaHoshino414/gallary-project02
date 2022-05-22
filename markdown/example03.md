@@ -5,8 +5,6 @@ excerpt: 'This is test excerpt of example03'
 type: ''
 ---
 
-## Heading Two
-
 ```js
 import {motion, AnimatePresence} from 'framer-motion';
 import { useImperativeHandle, useRef } from 'react';
