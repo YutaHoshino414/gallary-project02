@@ -26,7 +26,7 @@ const Gallary = () => {
             </div><hr/><br/>
             <h2>SPA <small>(Single Page Application)</small></h2>
             <div className={styles.card_wrapper}>
-                <Link href={"/gallary/spa01"} >
+                <Link href={"/gallary/spa/01"} >
                     <div className={styles.card} >SPA01</div> 
                 </Link>
             </div>
