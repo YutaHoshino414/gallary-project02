@@ -1,4 +1,5 @@
 ---
+id: 4
 title: 'example05'
 excerpt: 'This is test excerpt of example05'
 type: ''

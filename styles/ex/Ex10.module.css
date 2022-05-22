@@ -1,0 +1,36 @@
+.drag_n_drop {
+    padding: .5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: .5rem;
+    align-items: start;
+}
+
+.dnd_group {
+    padding: .5rem;
+    background-color: #758097;
+    border-radius: 5px;
+}
+
+.dnd_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    background-color: #fff;
+    color: #282c34;
+    border-radius: 5px;
+    margin-bottom: .5rem;
+}
+
+.current{
+    background-color: #282c34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    color: #282c34;
+    border-radius: 5px;
+    margin-bottom: .5rem;
+}
+

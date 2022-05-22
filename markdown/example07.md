@@ -1,4 +1,5 @@
 ---
+id: 6
 title: 'example07'
 excerpt: 'This is test excerpt of example07'
 type: 'css'

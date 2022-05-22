@@ -1,11 +1,3 @@
----
-id: 3
-title: 'example04'
-excerpt: 'This is test excerpt of example04'
-type: ''
----
-
-```js
 import { motion } from 'framer-motion';
 import { useRef, useEffect, useState } from "react";
 import images from './images';
@@ -72,4 +64,3 @@ const Example04 = () => {
 }
  
 export default Example04;
-```

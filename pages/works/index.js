@@ -16,7 +16,7 @@ const Works = ({works}) => {
           <h2>ALL</h2>
         <div className={styles.card_wrapper}>
             {works.map((work,i) => (
-              <Link href={`/works/${work.slug}`} key={i} >
+              <Link href={`/works/${i}`} key={i} >
               <div className={styles.card} >
                 <h3>{work.frontmatter.title}</h3>
 
@@ -31,7 +31,6 @@ export default Works;
 
 export async function getStaticProps(){
   const mdFiles = fs.readdirSync(path.join('markdown'))
-  console.log('inside:', mdFiles)
   const works = mdFiles.map(filename =>{
     // slug(endpoint)
     const slug = filename.replace('.md', '')
