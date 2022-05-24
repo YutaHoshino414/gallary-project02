@@ -35,7 +35,8 @@ const Work = ({markdown}) => {
         <div className={styles.work_page}>
         <div className="window">
             <div className="bloc_tabs">
-                <div className="control">・・・</div>
+                <div className="control">
+                    <b className='b-1'>●</b><b className='b-2'>●</b><b className='b-3'>●</b></div>
                 <button className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
                     onClick={() => toggleTab(1)}>{markdown.data.title}
                 </button>

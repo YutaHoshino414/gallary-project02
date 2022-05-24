@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  background: linear-gradient(to top,#b9c6d2 0%,#d0dde9 10.45%,#edf0f8 41.35%);
+  background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);  
   /* width: 1080px; */
   min-height: 100vh;
   margin: 0 auto;
@@ -118,7 +118,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 	flex-direction: column;
 	width: 65%;
 	height: 600px;
-	background: #ecececb6;
+	background: rgba(255, 255, 255, 0.1);
 	margin: 0 auto;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 10px;
@@ -129,7 +129,21 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .control{
-	margin: 0 40px;
+	margin: 0 30px;
+}
+.control b {
+  padding: 5px;
+  font-size: 12px;
+  
+}
+.b-1{
+  color: red;
+}
+.b-2{
+  color: rgb(255, 208, 0);
+}
+.b-3{
+  color: rgb(47, 165, 0);
 }
 
 .bloc_tabs {

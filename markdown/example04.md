@@ -14,28 +14,16 @@ import Image from 'next/image';
 import { css } from "@emotion/react";
 
 const bg = css`
-    padding: 10px 20px;
-    /* background-color: rgba(255,255,255); */
-    /* box-Shadow: 0px 3px 10px rgba(0,0,0, 0.3); */
+    /* emotion style here */
 `
 const item = css`
-    min-height: 15rem;
-    min-width: 20%;
-    padding: 10px;
-    img {
-    width: 100%;
-    height: 100%;
-    border-radius: 1rem;
-    pointer-events: none;
-    }
+    /* emotion style here */
 `;
 const inner_carousel = css`
-    display: flex;
-    align-items: flex-start;  /* 画像潰れを防ぐ */
+    /* emotion style here */
 `;
 const CarouselCss = css`
-    cursor: grab;
-    overflow: hidden;
+    /* emotion style here */
 ` ;
 
 

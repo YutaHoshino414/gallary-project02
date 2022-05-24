@@ -74,10 +74,13 @@ const Example02 = () => {
 
 export default Example02;
 
+
+const filter_container = css`
+    /* emotion style here */
+`
+
 const Filter = ({setTag}) =>{
-    const filter_container = css`
-        /* emotion style here */
-    `
+
     return (
         <div css={filter_container}>
             <button onClick={()=> setTag("all")}    >ALL</button>
