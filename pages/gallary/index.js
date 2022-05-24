@@ -4,9 +4,9 @@ import Link from 'next/link';
 const Gallary = () => {
     const gallaries = [
         {id:1, title:'gallary01', content:'PHOTO frame gallary'},
-        {id:2, title:'gallary02', content:'parallax'},
-        {id:3, title:'gallary03', content:'parallax'},
-        {id:4, title:'gallary04', content:'parallax'},
+        {id:2, title:'gallary02', content:''},
+        {id:3, title:'gallary03', content:''},
+        {id:4, title:'gallary04', content:''},
     ]
     return ( 
         <>
@@ -27,9 +27,25 @@ const Gallary = () => {
             <h2>SPA <small>(Single Page Application)</small></h2>
             <div className={styles.card_wrapper}>
                 <Link href={"/gallary/spa/01"} >
-                    <div className={styles.card} >SPA01</div> 
+                    <div className={styles.card} >
+                        SPA01
+                        <p>GSAP</p>
+                    </div> 
+                </Link>
+                <Link href={"/gallary/spa/02"} >
+                    <div className={styles.card} >
+                        SPA02
+                        <p></p>
+                    </div> 
+                </Link>
+                <Link href={"/gallary/spa/03"} >
+                    <div className={styles.card} >
+                        SPA03
+                        <p></p>
+                    </div> 
                 </Link>
             </div>
+            
         </div>
         
         </>

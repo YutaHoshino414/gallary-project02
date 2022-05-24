@@ -6,9 +6,25 @@ import Link from 'next/link'
 import Markdown from 'markdown-to-jsx';
 import Complist from '../../components/works/CompList'
 import styles from '../../styles/Works.module.css'
+import hljs from 'highlight.js/lib/core';
+// ハイライトしたい言語
+import javascript from 'highlight.js/lib/languages/javascript';
+import html from 'highlight.js/lib/languages/xml';
+import css from 'highlight.js/lib/languages/css';
+// CSS適用
+import 'highlight.js/styles/atom-one-dark.css';
+import { useEffect } from 'react';
+
+hljs.registerLanguage('javascript',javascript);
+hljs.registerLanguage('xml',html);
+hljs.registerLanguage('css',css);
 
 
 const Work = ({markdown}) => {
+    useEffect(()=>{
+        hljs.highlightAll();
+    })
+
     console.log(markdown.data.id)
     const [toggleState, setToggleState] = useState(1);
 

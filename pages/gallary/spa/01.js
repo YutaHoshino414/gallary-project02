@@ -7,7 +7,7 @@ import { gsap } from "gsap";
 import Image from 'next/image';
 /** @jsxImportSource @emotion/react */ 
 import { css } from '@emotion/react';
-import styles from './01.module.css';
+
 
 const container = css`
     display: flex;
@@ -58,6 +58,9 @@ const text = css`
     font-weight: 200;
     margin-right: -3000px;
     z-index: 1000;
+    span{
+    font-weight: 700;
+    }
 `
 const play = css`
     position: absolute;
@@ -129,7 +132,7 @@ const Spa01 = () => {
                 <img src={stars.src} alt="" id="stars"  />
                 <img src={moon.src} alt=""  id="moon"  />
                 <img src={mt_behind.src} alt=""  id="mountains_behind"  />
-                <h2 id="text" css={text}>Anime <span>JS</span></h2>
+                <h3 id="text" css={text}><span>Next.js</span></h3>
                 <button id="play" css={play} onClick={handleClick} >Play</button>
                 <img src={mt_front.src} alt=""  id="mountains_front"  />
             </div>
