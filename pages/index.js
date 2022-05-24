@@ -13,11 +13,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.intro}>
+      {/* <div className={styles.intro}>
         <h1>Next.js</h1>
-      </div>
+      </div> */}
       <div className={styles.intro2}>
-        <h1>Next.js</h1>
+        <div className={styles.intro2_title}>
+          <h1>React</h1>
+          <h1>Component</h1>
+          <h1>Gallary</h1>
+        </div>
       </div>
 
       <div className={styles.home}>

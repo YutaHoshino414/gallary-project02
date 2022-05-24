@@ -1,11 +1,11 @@
 import styles from '../styles/About.module.css'
-
+import user from '../public/user.jpg';
 
 const About = () => {
   return ( 
     <div className={styles.about}>
       <div className={styles.main}>
-        <h1>About Page</h1><br/>
+        <h1>About Page</h1><br/> {/* <img src={user.src}  className={styles.user_img} /> */}
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, 
           nobis commodi! Et, beatae. Quidem, fugit. Excepturi quae, cupiditate 
           quaerat impedit laudantium, nesciunt vel tempora fugit officiis consectetur 
