@@ -48,6 +48,10 @@ code{
   border-radius: 10px;
   width: 700px;
 }
+/* about card */
+.is_flipped {
+	transform: rotateX(180deg);
+}
 
 /* burger-menu */
 
