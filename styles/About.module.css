@@ -24,9 +24,10 @@
 
 .fire{
     position: absolute;
-    left: 650px;
-    top: 50px;
+    right: 150px;
+    bottom: 100px;
     filter: grayscale(100%);
+    cursor: pointer;
 }
 .fire:hover{filter: grayscale(0%);}
 

@@ -16,7 +16,6 @@ const card__inner = css`
 	height: 100%;
 	transition: transform 1s;
 	transform-style: preserve-3d;
-	cursor: pointer;
 	position: relative;
 `
 
@@ -55,7 +54,7 @@ const AboutCard = () => {
         console.log(flipped)
     }
     return ( 
-        <div css={card}><button onClick={handleFlip}><img src={fire.src} width={100} className={styles.fire} /></button>
+        <div css={card}>
 		<div  css={card__inner}  className={flipped ? "is_flipped":""}>
 			<div css={cardFace__front}  className={styles.card__face}>
 				<div css={front_content}>
@@ -96,6 +95,7 @@ const AboutCard = () => {
 				</div>
 			</div>
 		</div>
+		<button onClick={handleFlip}><img src={fire.src} width={100} className={styles.fire} /></button>
 	</div>
     );
 }
