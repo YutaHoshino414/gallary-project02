@@ -23,12 +23,12 @@
 }
 
 .fire{
-    position: relative;
-    left: 50px;
-    top: -100px;
+    position: absolute;
+    left: 650px;
+    top: 50px;
     filter: grayscale(100%);
 }
-/* .fire:hover{filter: grayscale(0%);} */
+.fire:hover{filter: grayscale(0%);}
 
 
 /* flip card */

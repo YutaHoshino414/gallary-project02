@@ -183,6 +183,7 @@ button {
 	border-radius: 0 0 10px 10px;
   overflow: scroll;
   background: white;
+  height: 100%;
 }
 .content {
 	background: rgb(122, 185, 201);

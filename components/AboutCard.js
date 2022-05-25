@@ -37,17 +37,26 @@ const front_content = css`
 const cardFace__back = css`
 	background-color: #f3f3f3;
 `
+const card__content = css`
+	width: 100%;
+	height: 100%;
+	
+`
 
 const AboutCard = () => {
     const [flipped, setFlipped] = useState(true);
-    
+	const [toggleState, setToggleState] = useState(1);
+	const toggleTab = (index) => {
+        setToggleState(index);
+    };
+
     function handleFlip(){
         setFlipped(!flipped)
         console.log(flipped)
     }
     return ( 
-        <div css={card}>
-		<div  css={card__inner} onClick={handleFlip} className={flipped ? "is_flipped":""}>
+        <div css={card}><button onClick={handleFlip}><img src={fire.src} width={100} className={styles.fire} /></button>
+		<div  css={card__inner}  className={flipped ? "is_flipped":""}>
 			<div css={cardFace__front}  className={styles.card__face}>
 				<div css={front_content}>
                     <h2>About</h2><br/>
@@ -57,14 +66,23 @@ const AboutCard = () => {
                     様々なライブラリを使用したコンポーネントを掲載しています。
                     </p>
                 </div>
-                <img src={fire.src} width={120} className={styles.fire} />
 			</div>
 			<div css={cardFace__back} className={styles.card__face}>
-				<div className="card__content">
-					<div className="card__header">
-						<h2>hello</h2><img src={user.src}  className={styles.user_img} />
+				<div css={card__content}>
+					<div className="bloc_tabs">
+						<div className="control">
+                            <b className='b-1'>●</b><b className='b-2'>●</b><b className='b-3'>●</b>
+                        </div>
+						<button className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
+                            onClick={() => toggleTab(1)}> who I am ..
+                        </button>
+						<button className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
+                            onClick={() => toggleTab(2)}> skills
+                        </button>
 					</div>
-					<div className="card__body">
+					<div className="content_block">
+					<div className={toggleState === 1 ? "content  active-content" : "content"}>
+						<img src={user.src}  className={styles.user_img} />
 						<h3>UNDER DEVELOPMENT ..</h3>
 						<h3>Update Here soon ..</h3>
 						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
@@ -72,6 +90,8 @@ const AboutCard = () => {
 							totam dolore similique distinctio nostrum. Fugit hic, corporis repudiandae id saepe non ea. 
 							Sapiente.Excepturi autem nihil omnis provident dolor possimus saepe itaque quasi eos aliquam? 
 						</p>
+					</div>
+					<div className={toggleState === 2 ? "content  active-content" : "content"}></div>
 					</div>
 				</div>
 			</div>
