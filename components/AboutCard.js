@@ -95,7 +95,9 @@ const AboutCard = () => {
 				</div>
 			</div>
 		</div>
-		<button onClick={handleFlip}><img src={fire.src} width={100} className={styles.fire} /></button>
+		<button onClick={handleFlip}>
+			<img src={fire.src} width={100} className={styles.fire} />
+		</button>
 	</div>
     );
 }
