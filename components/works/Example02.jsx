@@ -20,7 +20,8 @@ const data = [
     {id:12, title:'6', body:'', tag:"framer", },
 ]
 const example02 = css`
-    width: 80%;
+    width: 90%;
+    min-width: 500px;
     margin: 0 auto;
 `;
 const card_list = css`

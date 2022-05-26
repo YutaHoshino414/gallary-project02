@@ -19,6 +19,7 @@ const card = css`
         line-height: 150%;
     }
     margin-top: 20px;
+    min-width: 210px;
 `
 const expand = css`
     width: 500px;
@@ -29,7 +30,7 @@ const Example01 = () => {
     const [isOpen, setIsOpen] = useState(false);
     return ( 
         <>
-        <div css={example01}  id="page-wrap">
+        <div css={example01} >
             <motion.div css={card}
                 transition={{layout: {duration: 1.0, type: "spring"}}} 
                 layout 

@@ -3,7 +3,8 @@ import { css } from "@emotion/react";
 import { useState } from "react";
 
 const Tabs = css`
-    width: 60%;
+    width: 80%;
+    min-width: 600px;
     height: auto;
     min-height: 300px;
     background: #053742;

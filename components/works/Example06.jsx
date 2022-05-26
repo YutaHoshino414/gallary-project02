@@ -5,7 +5,7 @@ import Example01 from "./Example01";
 
 
 const Tabs = css`
-    width: 80%;
+    min-width: 600px;
     height: auto;
     min-height: 100%;
     background: rgba(255,255,255, 0.1); 

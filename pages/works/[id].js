@@ -6,21 +6,47 @@ import Link from 'next/link'
 import Markdown from 'markdown-to-jsx';
 import Complist from '../../components/works/CompList'
 import styles from '../../styles/Works.module.css'
+import Split from 'react-split';
 import hljs from 'highlight.js/lib/core';
 // ハイライトしたい言語
 import javascript from 'highlight.js/lib/languages/javascript';
 import html from 'highlight.js/lib/languages/xml';
-import css from 'highlight.js/lib/languages/css';
+import csshl from 'highlight.js/lib/languages/css';
 // CSS適用
 import 'highlight.js/styles/atom-one-dark.css';
 import { useEffect } from 'react';
+import SideList from '../../components/SideList';
+/** @jsxImportSource @emotion/react */ 
+import { css } from "@emotion/react";
 
 hljs.registerLanguage('javascript',javascript);
 hljs.registerLanguage('xml',html);
-hljs.registerLanguage('css',css);
+hljs.registerLanguage('css',csshl);
 
+const split = css`
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: 60%;
+    border-radius: 10px;
+    margin-right: 150px;
+    box-shadow: 0px 10px 20px rgba(0,0,0, 0.3);
+`
+const bg1 = css`
+    background-color: rgb(202, 229, 253);
+    /* white-space: nowrap; */
+    overflow: scroll;
+`
+const bg2 = css`
+    background-color: rgba(240, 248, 255, 0.493);
+    overflow: scroll;
+    border-radius: 0px 10px 10px 0px;
+`
+const inner = css`
+    padding: 20px;
+`
 
-const Work = ({markdown}) => {
+const Work = ({markdown, mdFilesWithData}) => {
     useEffect(()=>{
         hljs.highlightAll();
     })
@@ -33,35 +59,27 @@ const Work = ({markdown}) => {
     };
     return ( 
         <div className={styles.work_page}>
-        <div className="window">
-            <div className="bloc_tabs">
-                <div className="control">
-                    <b className='b-1'>●</b><b className='b-2'>●</b><b className='b-3'>●</b>
-                </div>
-                <button className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
-                    onClick={() => toggleTab(1)}>{markdown.data.title}
-                </button>
-                <button className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
-                    onClick={() => toggleTab(2)}> code
-                </button>
-            </div>
-            <div className="content_block">
-                <div className={toggleState === 1 ? "content  active-content" : "content"}>
-                    <hr/><br/>
-                    <Complist path={markdown.data.id} />
-                </div>
-
-                <div className={toggleState === 2 ? "content  active-content" : "content"}>
-                    <Markdown >
-                        {markdown.content}
-                    </Markdown>
-                </div>
-            </div>
-        </div>
         <Link href="/works">
             <button className={styles.btn}>一覧に戻る</button>
         </Link>
+        <SideList mdlist={mdFilesWithData} />
+        
+        <Split css={split} minSize={0} sizes={[0, 100]} gutterSize={10} >
+            <div css={bg1}>
+                <h1>Split.js</h1>
+                <pre>コンポーネントにmin-widthを指定すると潰れなくなる</pre>
+                <Markdown >
+                    {markdown.content}
+                </Markdown>
+            </div>
+            <div css={bg2}>
+                <div css={inner}>
+                <Complist path={markdown.data.id} />
+                </div>
+            </div>
+        </Split>
         </div>
+        
     );
 }
 
@@ -97,7 +115,8 @@ export const getStaticProps = async ({params})=>{
 
     return{
         props: {
-            markdown
+            markdown,
+            mdFilesWithData
         }
     }
 }
