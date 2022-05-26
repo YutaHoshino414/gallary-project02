@@ -59,10 +59,6 @@ const Work = ({markdown, mdFilesWithData}) => {
     };
     return ( 
         <div className={styles.work_page}>
-        <Link href="/works">
-            <button className={styles.btn}>一覧に戻る</button>
-        </Link>
-        <SideList mdlist={mdFilesWithData} />
         
         <Split css={split} minSize={0} sizes={[0, 100]} gutterSize={10} >
             <div css={bg1}>
@@ -78,6 +74,10 @@ const Work = ({markdown, mdFilesWithData}) => {
                 </div>
             </div>
         </Split>
+        <Link href="/works">
+            <button className={styles.btn}>一覧に戻る</button>
+        </Link>
+        <SideList mdlist={mdFilesWithData} />
         </div>
         
     );

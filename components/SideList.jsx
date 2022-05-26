@@ -23,7 +23,7 @@ const SideList = ({mdlist}) => {
         sideList!
         {mdlist.map((md)=>(
             <div css={item}>
-                <Link href={`/works/${md.data.id}`}>
+                <Link href={`/works/${md.data.id}`} key={item.id}>
                 {md.data.title}
                 </Link>
             </div>
