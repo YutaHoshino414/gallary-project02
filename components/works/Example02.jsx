@@ -23,10 +23,11 @@ const example02 = css`
     width: 90%;
     min-width: 600px;
     margin: 0 auto;
+    padding-bottom: 50px;
 `;
 const card_list = css`
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     grid-column-gap: 1rem;
     grid-row-gap: 2rem;
 `;
@@ -85,7 +86,7 @@ export default Example02;
 
 const Filter = ({setTag}) =>{
     const filter_container = css`
-        padding: 30px 5px;
+        padding-bottom: 30px;
         button{
             margin-right: 1rem;
             min-width: 5rem;

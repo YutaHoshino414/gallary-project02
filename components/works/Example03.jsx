@@ -51,12 +51,13 @@ const Example03 = () => {
 export default Example03;
 
 const modal_backdrop = css`
-position: fixed;
-height: 100vh;
-width: 100vw;
-top: 0;
-left: 0;
-background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 `
 const modal_content_wrapper =css`
 position: fixed;
@@ -69,6 +70,7 @@ bottom: 0;
 left: 0;
 right: 0;
 padding: 50px;
+z-index: 2;
 `
 
 const Modal = forwardRef(function Modal(props, ref) {

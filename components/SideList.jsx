@@ -7,26 +7,30 @@ const section = css`
     right: 0;
     width: 200px;
     height: 100vh;
-    background-color: #ffffff14;
+    background-color: rgba(0,0,0, 0.2);
     
     /* margin-left: 100px; */
     box-shadow: 0px 10px 20px rgba(0,0,0, 0.3);
 `
 const header = css`
     height: 70px;
-    color: #ec8f03;
+    color: #4a567e;
     padding: 10px;
 `
 const item_list = css`
     overflow: scroll;
-    height: 90%;
-    
+    height: 85%;
+    margin-bottom: 10px;
 `
 const item = css`
-    width: 90%;
-    height: 120px;
-    background-color: #63646450;
+    width: 80%;
+    height: 100px;
+    background-color: #ffffff86;
     margin: 10px;
+    padding: 10px;
+    a{
+        color: #797979;
+    }
 `
 const SideList = ({mdlist}) => {
     return ( 

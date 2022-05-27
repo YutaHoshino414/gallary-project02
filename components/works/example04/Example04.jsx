@@ -5,15 +5,11 @@ import Image from 'next/image';
 /** @jsxImportSource @emotion/react */ 
 import { css } from "@emotion/react";
 
-const bg = css`
-    padding: 10px 20px;
-    /* background-color: rgba(255,255,255); */
-    /* box-Shadow: 0px 3px 10px rgba(0,0,0, 0.3); */
-`
+
 const item = css`
     min-height: 15rem;
-    min-width: 20%;
-    padding: 10px;
+    min-width: 30%;
+    padding: 15px;
     img {
     width: 100%;
     height: 100%;
@@ -42,7 +38,6 @@ const Example04 = () => {
 
     return ( 
         <div className="example04">
-            <div css={bg}>
             <motion.div 
                 ref={carousel} 
                 css={CarouselCss} 
@@ -58,9 +53,8 @@ const Example04 = () => {
                     })}
                 </motion.div>
             </motion.div>
-            </div>
         </div>
-     );
+    );
 }
- 
+
 export default Example04;

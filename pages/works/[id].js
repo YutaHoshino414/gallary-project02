@@ -41,15 +41,17 @@ const bg1 = css`
             inset -5px -5px 25px rgba(0,0,0,.1);
 `
 const bg2 = css`
-    background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);   
+    /* background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);  */  
+    background: linear-gradient(to top,#b9c6d2 0%,#d0dde9 10.45%,#edf0f8 41.35%); 
+    
     overflow: scroll;
     border-radius: 0px 10px 10px 0px;
-    box-shadow: inset 5px 0px 25px rgba(0,0,0,.3),
-            inset -5px -5px 25px rgba(0,0,0,.3);
+    box-shadow: inset 5px 0px 5px rgba(0,0,0,.3),
+            inset -5px -0px 15px rgba(0,0,0,.3);
 `
 const inner = css`
     height: 100%;
-    padding: 20px 20px;
+    padding: 40px 40px;
     
     /* コンポーネントにmin-widthを指定すると潰れなくなる */
 `
@@ -66,9 +68,10 @@ const Work = ({markdown, mdFilesWithData}) => {
         setToggleState(index);
     };
     return ( 
+        <>
         <div className={styles.work_page}>
         
-        <Split css={split} minSize={0} sizes={[0, 100]} gutterSize={10} >
+        <Split css={split} minSize={0} sizes={[0, 99]} gutterSize={10}  >
             <div css={bg1}>
             <div css={inner}>
                 <Markdown >
@@ -87,7 +90,11 @@ const Work = ({markdown, mdFilesWithData}) => {
         </Link>
         <SideList mdlist={mdFilesWithData} />
         </div>
-        
+        {/* <div className={styles.work_page}>
+            <Complist path={markdown.data.id} />
+        <SideList mdlist={mdFilesWithData} />
+        </div> */}
+        </>
     );
 }
 
