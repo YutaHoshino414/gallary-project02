@@ -27,23 +27,31 @@ const split = css`
     display: flex;
     flex-direction: row;
     width: 60%;
-    height: 60%;
+    height: 65%;
     border-radius: 10px;
     margin-right: 150px;
-    box-shadow: 0px 10px 20px rgba(0,0,0, 0.3);
+    /* box-shadow: 0px 10px 20px rgba(0,0,0, 0.3); */
 `
 const bg1 = css`
-    background-color: rgb(202, 229, 253);
+    background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
     /* white-space: nowrap; */
     overflow: scroll;
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: inset 0px 0px 5px rgba(0,0,0,.3),
+            inset -5px -5px 25px rgba(0,0,0,.1);
 `
 const bg2 = css`
-    background-color: rgba(240, 248, 255, 0.493);
+    background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);   
     overflow: scroll;
     border-radius: 0px 10px 10px 0px;
+    box-shadow: inset 5px 0px 25px rgba(0,0,0,.3),
+            inset -5px -5px 25px rgba(0,0,0,.3);
 `
 const inner = css`
-    padding: 20px;
+    height: 100%;
+    padding: 20px 20px;
+    
+    /* コンポーネントにmin-widthを指定すると潰れなくなる */
 `
 
 const Work = ({markdown, mdFilesWithData}) => {
@@ -62,11 +70,11 @@ const Work = ({markdown, mdFilesWithData}) => {
         
         <Split css={split} minSize={0} sizes={[0, 100]} gutterSize={10} >
             <div css={bg1}>
-                <h1>Split.js</h1>
-                <pre>コンポーネントにmin-widthを指定すると潰れなくなる</pre>
+            <div css={inner}>
                 <Markdown >
                     {markdown.content}
                 </Markdown>
+            </div>
             </div>
             <div css={bg2}>
                 <div css={inner}>

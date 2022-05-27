@@ -198,3 +198,15 @@ button {
 .active-content {
 	display: block;
 }
+
+.gutter {
+  background-color: rgba(226, 185, 2, 0.555);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  /* border: 1px solid rgb(177, 177, 177); */
+}
+.gutter.gutter-horizontal {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+  cursor: col-resize;
+  border-radius: 10px 0px 0px 10px;
+}

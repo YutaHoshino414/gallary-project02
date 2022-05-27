@@ -21,7 +21,7 @@ const data = [
 ]
 const example02 = css`
     width: 90%;
-    min-width: 500px;
+    min-width: 600px;
     margin: 0 auto;
 `;
 const card_list = css`

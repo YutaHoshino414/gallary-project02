@@ -29,7 +29,7 @@ const list_item = css`
 
 const SideMenu = props => {
     return ( 
-        <Menu width={ 260 }  {...props} >
+        <Menu width={ 260 }  {...props}  >
             <div css={title}>
                 <h1>React Gallary</h1>
             </div>
