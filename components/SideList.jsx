@@ -39,7 +39,7 @@ const SideList = ({mdlist}) => {
             </div>
             <div css={item_list}>
             {mdlist.map((md)=>(
-                    <Link href={`/works/${md.data.id}`}>
+                    <Link href={`/works/${md.data.id}`} key={md.id}  >
                 <div css={item}  key={md.id}>
                     {md.data.title}
                 </div>
