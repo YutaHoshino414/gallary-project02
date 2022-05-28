@@ -9,7 +9,7 @@ import Example08 from './Example08';
 import Example09 from './Example09';
 import Example10 from './Example10';
 
-const Components = [
+const CompList = [
     {id:1, element:<Example01/>, slug:'example01'}, 
     {id:2, element:<Example02/>, slug:'example02'}, 
     {id:3, element:<Example03/>, slug:'example03'}, 
@@ -22,23 +22,5 @@ const Components = [
     {id:10, element:<Example10/>},
 ];
 
-const CompList = ({path})=>{
-    console.log('component list >>', path)
-    return(
-        <>
-            {Components.map((comp, i) =>(
-            <div key={comp.id}>
-                {path === i? comp.element :""}
-            </div>
-            ))}
-        </>
-    )
-}
 
 export default CompList; 
-/* const CompList = [
-    <Example01/>, <Example02/>, <Example03/>, <Example04/>, <Example05/>, 
-    <Example06/>,
-];
-
-export default CompList; */

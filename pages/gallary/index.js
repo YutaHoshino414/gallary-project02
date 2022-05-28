@@ -19,7 +19,7 @@ const Gallary = () => {
             {gallaries.map((gallary, i)=>(
                 <Link href={`/gallary/${gallary.id}`} key={i} >
                 <div className={styles.card} >
-                    <h3>{gallary.title}</h3><hr/><br/>
+                    <h3>{gallary.title}</h3><br/>
                     <h4>{gallary.content}</h4>
                 </div></Link>
             ))}

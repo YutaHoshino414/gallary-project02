@@ -20,7 +20,7 @@ const Example05 = () => {
     width:55%
   `
   const card = css`
-    width: 450px;
+    width: 600px;
     padding: 60px;
     background-color: ${background};
     h1 {

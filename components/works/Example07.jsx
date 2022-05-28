@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 const wrapper = css`
     margin:0 auto;
-    width:100%;
+    width: 90%;
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-column-gap: 1rem;
@@ -18,7 +18,7 @@ const box = css`
     padding: 15px;
     border: 15px solid #fff;
     background-color: #eee;
-    max-width: 200px;
+    max-width: 250px;
     transition: all .8s;
     :hover{
         box-shadow: inset 1px 1px 3px

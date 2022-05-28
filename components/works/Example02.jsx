@@ -39,10 +39,10 @@ const card = css`
     box-shadow: 0px 10px 20px rgba(0,0,0, 0.3);
 `;
 const card_header = css`
-    width: 67%;
-    height: 30px;
+    width: 100%;
+    height: 70px;
     padding: 20px;
-    border-radius: 10px 10px 30% 0;
+    border-radius: 10px 10px 40% 0;
     background-image: linear-gradient(to bottom left, 
         #3ab3e2 10%, #1078bd 115%);
     p{

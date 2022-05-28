@@ -4,7 +4,8 @@ import matter from 'gray-matter';
 import { useState } from 'react';
 import Link from 'next/link'
 import Markdown from 'markdown-to-jsx';
-import Complist from '../../components/works/CompList'
+
+import CompSelect from '../../components/works/CompSelect';
 import styles from '../../styles/Works.module.css'
 import Split from 'react-split';
 import hljs from 'highlight.js/lib/core';
@@ -60,18 +61,13 @@ const Work = ({markdown, mdFilesWithData}) => {
     useEffect(()=>{
         hljs.highlightAll();
     })
-
     console.log(markdown.data.id)
-    const [toggleState, setToggleState] = useState(1);
 
-    const toggleTab = (index) => {
-        setToggleState(index);
-    };
     return ( 
         <>
         <div className={styles.work_page}>
         
-        <Split css={split} minSize={0} sizes={[0, 99]} gutterSize={10}  >
+        <Split css={split} minSize={0} sizes={[0, 100]} gutterSize={10}  >
             <div css={bg1}>
             <div css={inner}>
                 <Markdown >
@@ -81,7 +77,7 @@ const Work = ({markdown, mdFilesWithData}) => {
             </div>
             <div css={bg2}>
                 <div css={inner}>
-                <Complist path={markdown.data.id} />
+                <CompSelect path={markdown.data.id} />
                 </div>
             </div>
         </Split>

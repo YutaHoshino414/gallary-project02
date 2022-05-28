@@ -6,7 +6,7 @@ const Tabs = css`
     width: 80%;
     min-width: 600px;
     height: auto;
-    min-height: 300px;
+    min-height: 400px;
     background: #053742;
     margin: .5rem auto 1.5rem;
     padding: 2rem 1rem;
@@ -38,7 +38,7 @@ const nav = css`
         border-bottom-left-radius: 2rem;
         border-top-left-radius: 2rem;
     }
-    li:nth-child(2) {
+    li:nth-of-type(2) {
         border-radius: 0;
         border-bottom-right-radius: 2rem;
         border-top-right-radius: 2rem;

@@ -5,9 +5,10 @@ import Example01 from "./Example01";
 
 
 const Tabs = css`
-    min-width: 600px;
+    width: 80%;
+    min-width: 500px;
     height: auto;
-    min-height: 100%;
+    min-height: 400px;
     background: rgba(255,255,255, 0.1); 
     box-Shadow: 0px 3px 10px rgba(0,0,0, 0.3);
     margin: 0 auto 2rem;
@@ -53,7 +54,7 @@ const nav = css`
     }
 `
 const Outlet = css`
-    height: 350px;
+    height: 300px;
 `
 
 const Example06 = () => {
