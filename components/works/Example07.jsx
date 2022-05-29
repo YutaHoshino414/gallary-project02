@@ -8,17 +8,15 @@ import Image from 'next/image';
 
 const wrapper = css`
     margin:0 auto;
-    width: 90%;
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-column-gap: 1rem;
-    grid-row-gap: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 `;
 const box = css`
     padding: 15px;
     border: 15px solid #fff;
     background-color: #eee;
-    max-width: 250px;
+    max-width: 300px;
     transition: all .8s;
     :hover{
         box-shadow: inset 1px 1px 3px
@@ -41,9 +39,9 @@ const Example07 = () => {
                 <div css={box}>
                     <Image src={img02} alt="" width={200} height={300} />
                 </div>
-                <div css={box}>
+{/*                 <div css={box}>
                     <Image src={img03} alt="" width={200} height={300} />
-                </div>
+                </div> */}
             </div>
         </div>
      );

@@ -19,7 +19,7 @@ const card = css`
         line-height: 150%;
     }
     margin-top: 20px;
-    min-width: 210px;
+    min-width: 350px;
 `
 const expand = css`
     width: 500px;

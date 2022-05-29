@@ -2,7 +2,7 @@
 import { css } from "@emotion/react";
 import CompList from "../works/CompList";
 import { gsap } from 'gsap';
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger"; /* In order to make the plugins work in Next you need to import them from the dist folder:https://greensock.com/forums/topic/28476-gsap-3-doesnt-work-with-nextjs/ */
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger"; /* In order to make the plugins work in Next.js you need to import them from the dist folder:https://greensock.com/forums/topic/28476-gsap-3-doesnt-work-with-nextjs/ */
 import { useEffect, useRef } from 'react';
 
 const section = css`
@@ -17,7 +17,7 @@ const wrap = css`
 `
 const box = css`
     width: 100%;
-    height: 80%;
+    height: 90%;
     padding: 40px 20px;
     border: 15px solid #fff;
     background-color: #eee;
@@ -34,15 +34,13 @@ const box = css`
 
 const reveal = css`
     color: #033663;
-    font-size: 40px;
+    font-size: 30px;
     /* text-align: center; */
-        margin-top: 20px;
+    margin-bottom: 20px;
 `
 
 const Test01 = () => {
     const el = useRef();
-    const q = gsap.utils.selector(el);
-    console.log(q("#active"))
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -54,17 +52,20 @@ const Test01 = () => {
     const setAnimation = () => {
         /* const active = gsap.utils.toArray('#active'); */
         /* console.log(active) */
+        const q = gsap.utils.selector(el);
+        console.log(q("#active"))
         q("#active").map((text,i) => {
         gsap.fromTo(text,
-            { opacity: 0, x: -100 }, //fromの設定
+            { opacity: 0, x: 400 }, //fromの設定
             {
                 opacity: 1,
-            x: 550,
-            scrollTrigger: {
-                trigger: text,
-                start:'top 90%',
-                end: 'top 20%',
-                /* markers: true */
+                x: 600,
+                duration: 1.2,
+                scrollTrigger: {
+                    trigger: text,
+                    start:'top 50%',
+                    end: 'top 20%',
+                    /* markers: true */
             }
         })
         })
@@ -72,15 +73,18 @@ const Test01 = () => {
 
     return ( 
         <div ref={el}>
-            <div css={section}>Gallary01</div>
+            <div css={section}>
+                <h2>Gallary01</h2>
+            </div>
+
             {CompList.map((comp)=>(
             <div css={section} key={comp.id}>
                 <div css={wrap}  >
+                    <h2 css={reveal} id="active">{comp.slug}</h2>
                     <div css={box}>
                         <br/>
                         {comp.element}
                     </div>
-                    <h2 css={reveal} id="active">{comp.slug}</h2>
                 </div>
             </div>
             ))}

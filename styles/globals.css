@@ -152,7 +152,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .bloc_tabs {
 	display: flex;
-	padding-top: 15px;
+	padding-top: 10px;
 }
 
 .tabs {
@@ -177,21 +177,36 @@ Note: Beware of modifying this element as it can break the animations - you shou
 button {
 	border: none;
 }
-
+.menu{
+  width: 100%;
+  height: 40px;
+  background: white;
+  position: relative;
+}
 .content_block {
 	flex-grow : 1;
 	border-radius: 0 0 10px 10px;
-  overflow: scroll;
+  /* overflow: scroll; */
   background: white;
-  height: 100%;
+  /* height: 100%; */
 }
 .content {
-	background: rgb(122, 185, 201);
-  
+  background: linear-gradient(to top,#b9c6d2 0%,#d0dde9 10.45%,#edf0f8 41.35%); 
 	width: 100%;
-	min-height: 100%;
 	display: none;
-  padding: 50px 30px;
+  margin: 0 auto;
+}
+.content_main{
+  border-top: 1px solid #dadada;
+  height: 460px;
+  padding: 10px 30px;
+  border-radius: 0 0 10px 10px;
+  overflow: scroll;
+}
+.content2 {
+  background: #373a47;
+	width: 100%;
+	display: none;
   margin: 0 auto;
 }
 

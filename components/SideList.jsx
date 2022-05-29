@@ -5,11 +5,9 @@ import Link from 'next/link';
 const section = css`
     position: absolute;
     right: 0;
-    width: 200px;
+    width: 180px;
     height: 90%;
     background-color: rgba(255,255,255, 0.1);
-    
-    /* margin-left: 100px; */
     box-shadow: 0px 10px 20px rgba(0,0,0, 0.3);
 `
 const header = css`
@@ -23,7 +21,7 @@ const item_list = css`
     margin-bottom: 10px;
 `;
 const item = css`
-    width: 80%;
+    width: 90%;
     height: 100px;
     background-color: #88888885;
     margin: 10px;

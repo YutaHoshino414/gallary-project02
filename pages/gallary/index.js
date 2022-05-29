@@ -6,7 +6,7 @@ const Gallary = () => {
         {id:1, title:'gallary01', content:'PHOTO frame gallary'},
         {id:2, title:'gallary02', content:''},
         {id:3, title:'gallary03', content:''},
-        {id:4, title:'gallary04', content:''},
+        {id:4, title:'gallary04', content:'frame sellection'},
     ]
     return ( 
         <>

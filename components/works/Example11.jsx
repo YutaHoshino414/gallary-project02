@@ -7,7 +7,7 @@ const Example06 = () => {
 
     return ( 
         <>
-        example06 coming soon..
+        example11 coming soon..
         </>
     );
 }

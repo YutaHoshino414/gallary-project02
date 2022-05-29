@@ -8,6 +8,7 @@ import Example07 from './Example07';
 import Example08 from './Example08';
 import Example09 from './Example09';
 import Example10 from './Example10';
+import Example11 from './Example11';
 
 const CompList = [
     {id:1, element:<Example01/>, slug:'example01'}, 
@@ -20,6 +21,7 @@ const CompList = [
     {id:8, element:<Example08/>, slug:'example08'},
     {id:9, element:<Example09/>, slug:'example09'},
     {id:10, element:<Example10/>},
+    {id:11, element:<Example11/>},
 ];
 
 
