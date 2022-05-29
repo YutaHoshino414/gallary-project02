@@ -32,7 +32,7 @@ const Example10 = () => {
 
 
     return ( 
-        <div>
+        <div className={styles.example10}>
             <div className={styles.drag_n_drop}>
             {data.map((grp,grpIndex)=>(
                 <div className={styles.dnd_group} key={grp.title}>

@@ -6,8 +6,8 @@ import hljs from 'highlight.js/lib/core';
 
 const wrap = css`
     margin-right: 100px;
-    width: 60%;
-    height:80%;
+    width: 100%;
+    height:70%;
 
 `
 const Tabs = css`

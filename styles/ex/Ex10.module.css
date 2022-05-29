@@ -1,7 +1,11 @@
+.example10{
+    width: 100vh;
+}
+
 .drag_n_drop {
     padding: .5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-columns: repeat(auto-fill, 250px);
     gap: .5rem;
     align-items: start;
 }

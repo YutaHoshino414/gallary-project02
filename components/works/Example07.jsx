@@ -10,13 +10,14 @@ const wrapper = css`
     margin:0 auto;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 `;
 const box = css`
     padding: 15px;
     border: 15px solid #fff;
     background-color: #eee;
     max-width: 300px;
+    margin-right: 50px;
     transition: all .8s;
     :hover{
         box-shadow: inset 1px 1px 3px

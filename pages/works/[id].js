@@ -4,8 +4,8 @@ import matter from 'gray-matter';
 import { useState } from 'react';
 import Link from 'next/link'
 import Markdown from 'markdown-to-jsx';
-import Temp02 from '../../components/works/temp/Temp02'
-import Temp03 from '../../components/works/temp/Temp03'
+import Temp04 from '../../components/works/temp/Temp04'
+
 import CompSelect from '../../components/works/CompSelect';
 import styles from '../../styles/Works.module.css'
 
@@ -20,6 +20,7 @@ import { useEffect } from 'react';
 import SideList from '../../components/SideList';
 /** @jsxImportSource @emotion/react */ 
 import { css } from "@emotion/react";
+import Example03 from '../../components/works/Example03';
 
 hljs.registerLanguage('javascript',javascript);
 hljs.registerLanguage('xml',html);
@@ -45,13 +46,10 @@ const Work = ({markdown, mdFilesWithData}) => {
             <div css={title}>
                 <h2>{markdown.data.title}</h2>
             </div>
-            <Temp02 >
-                <CompSelect path={markdown.data.id} />
-                
-                <Markdown >
+            <CompSelect path={markdown.data.id} />
+                {/* <Markdown >
                     {markdown.content}
-                </Markdown>
-            </Temp02>
+                </Markdown> */}
         <Link href="/works">
             <button className={styles.btn}>一覧に戻る</button>
         </Link>
