@@ -1,4 +1,4 @@
-import  CardList  from './CardList';
+import CardList from './CardList';
 /** @jsxImportSource @emotion/react */ 
 import { css } from '@emotion/react';
 import { motion, Variants } from "framer-motion";

@@ -36,8 +36,8 @@ const SideList = ({mdlist}) => {
                 <h2>CompList!</h2>
             </div>
             <div css={item_list}>
-            {mdlist.map((md)=>(
-                    <Link href={`/works/${md.data.id}`} key={md.id}  >
+            {mdlist.map((md, i)=>(
+                    <Link href={`/works/${md.data.id}`} key={i}  >
                 <div css={item}  key={md.id}>
                     {md.data.title}
                 </div>
