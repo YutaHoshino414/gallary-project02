@@ -5,18 +5,13 @@
     justify-content: center;
 }
 
-.content{
-    padding: 20px;
-    width: 70%;
-    border: 1px solid #fff;
-    border-radius: 10px;
-}
-
 .user_img{
-    width: 110px;
-    height: 110px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
+    position: absolute;
+    right: 0;
     
     border: 3px solid rgba(255, 255, 255, 0.5);
     z-index: 1;
@@ -24,7 +19,7 @@
 
 .fire{
     position: absolute;
-    right: 150px;
+    left: 150px;
     bottom: 100px;
     filter: grayscale(100%);
     cursor: pointer;
@@ -51,7 +46,7 @@
 	flex-direction: column;
 	width: 60%;
 	height: 70%;
-	background: rgba(255, 255, 255, 0.1);
+	
 	margin: 0 auto;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 10px;
@@ -64,6 +59,7 @@
 .bloc_tabs {
 	display: flex;
 	padding-top: 10px;
+    background-color: rgba(48, 51, 51, 0.507);
 }
 .tabs {
 	border-radius: 10px 10px 0 0;
@@ -74,11 +70,20 @@
 	cursor: pointer;
 	position: relative;
 	color: rgb(114, 114, 114);
+    border: none;
 }
 
-.active-tabs  {
+.active_tabs  {
 	background: white;
 	border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
+	padding: 10px;
+	text-align: center;
+	width: 20%;
+	cursor: pointer;
+	position: relative;
+	color: rgb(114, 114, 114);
+    border: none;
 }
 
 .control{
@@ -88,25 +93,22 @@
     padding: 5px;
     font-size: 12px;
 }
-.b-1{
+.b_1{
     color: red;
 }
-.b-2{
+.b_2{
     color: rgb(255, 208, 0);
 }
-.b-3{
+.b_3{
     color: rgb(72, 255, 0);
-}
-button {
-	border: none;
 }
 
 .content_block {
 	flex-grow : 1;
 	border-radius: 0 0 10px 10px;
   /* overflow: scroll; */
-    background: white;
-  /* height: 100%; */
+    background: rgba(255, 255, 255);
+    height: 100%;
 }
 
 .menu{
@@ -117,7 +119,7 @@ button {
 }
 
 .content {
-    /* background: linear-gradient(to top,#b9c6d2 0%,#d0dde9 10.45%,#edf0f8 41.35%);  */
+    
       /* width: 100%; */
     display: none;
     /* margin: 0 auto; */
@@ -131,6 +133,6 @@ button {
     overflow: scroll;
 }
 
-.active-content {
+.active_content {
 	display: block;
 }

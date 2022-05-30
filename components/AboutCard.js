@@ -34,7 +34,6 @@ const front_content = css`
     padding: 30px;
 `
 const cardFace__back = css`
-	background-color: #f3f3f3;
 `
 const card__content = css`
 	width: 100%;
@@ -68,19 +67,19 @@ const AboutCard = () => {
 			</div>
 			<div css={cardFace__back} className={styles.card__face}>
 				<div css={card__content}>
-					<div className="bloc_tabs">
-						<div className="control">
-                            <b className='b-1'>●</b><b className='b-2'>●</b><b className='b-3'>●</b>
+					<div className={styles.bloc_tabs}>
+						<div className={styles.control}>
+                            <b className={styles.b_1}>●</b><b className={styles.b_2}>●</b><b className={styles.b_3}>●</b>
                         </div>
-						<button className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
+						<button className={toggleState === 1 ? styles.active_tabs: styles.tabs}
                             onClick={() => toggleTab(1)}> who I am ..
                         </button>
-						<button className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
+						<button className={toggleState === 2 ? styles.active_tabs : styles.tabs}
                             onClick={() => toggleTab(2)}> skills
                         </button>
 					</div>
-					<div className="content_block">
-					<div className={toggleState === 1 ? "content  active-content" : "content"}>
+					<div className={styles.content_block}>
+					<div className={toggleState === 1 ? "active-content" : styles.content} >
 						<img src={user.src}  className={styles.user_img} />
 						<h3>UNDER DEVELOPMENT ..</h3>
 						<h3>Update Here soon ..</h3>
@@ -90,7 +89,10 @@ const AboutCard = () => {
 							Sapiente.Excepturi autem nihil omnis provident dolor possimus saepe itaque quasi eos aliquam? 
 						</p>
 					</div>
-					<div className={toggleState === 2 ? "content  active-content" : "content"}></div>
+                        <div className={toggleState === 2 ? "active-content" :styles.content}>
+						kkkkk
+						</div>
+					
 					</div>
 				</div>
 			</div>
