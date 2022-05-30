@@ -1,4 +1,4 @@
-export const cardList = [
+const CardList = [
     {
         image: "🍅",
         h2: "Fruit and vegetables",
@@ -40,3 +40,5 @@ export const cardList = [
         p: "They are reallly good for you...."
     }
 ];
+
+export default CardList;

@@ -1,4 +1,4 @@
-import {cardList} from './cardList';
+import  CardList  from './cardList';
 /** @jsxImportSource @emotion/react */ 
 import { css } from '@emotion/react';
 import { motion, Variants } from "framer-motion";
@@ -20,7 +20,7 @@ const Spa02 = () => {
         <div css={card_wrapper}>
             <h1>Scroll Down</h1>
         </div>
-        {cardList.map((item, index)=>(
+        {CardList.map((item, index)=>(
             <div css={card_wrapper} key={index}>
                 <Card image={item.image} h2={item.h2} p={item.p} />
             </div>
