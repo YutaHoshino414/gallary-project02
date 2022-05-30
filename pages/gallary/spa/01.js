@@ -2,7 +2,7 @@ import stars from './images/stars.png';
 import moon from './images/moon.png';
 import mt_behind from './images/mountains_behind.png';
 import mt_front from './images/mountains_front.png';
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Image from 'next/image';
 /** @jsxImportSource @emotion/react */ 
@@ -84,9 +84,11 @@ const Spa01 = () => {
     const el = useRef();
     const q = gsap.utils.selector(el);
     const tl = useRef();
-
+    const [replay,setReplay] = useState(false);
+    
     const handleClick = ()=>{
-        tl.current = gsap.timeline()      /* {repeat: 1} */
+        
+            tl.current = gsap.timeline()      /* {repeat: 1} */
             .to(q("#play"), {
                 ease:"back.in", 
                 duration:0.8,
@@ -123,6 +125,7 @@ const Spa01 = () => {
                 top: 450, 
             })
             ; /* finally semicolon! */
+            
     }
 
     return ( 

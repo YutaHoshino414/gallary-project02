@@ -29,13 +29,13 @@ const Gallary = () => {
                 <Link href={"/gallary/spa/01"} >
                     <div className={styles.card} >
                         SPA01
-                        <p>GSAP</p>
+                        <p>Timeline Animation with <b>GSAP</b></p>
                     </div> 
                 </Link>
                 <Link href={"/gallary/spa/02"} >
                     <div className={styles.card} >
                         SPA02
-                        <p></p>
+                        <p>scroll Animation with <b>Framer Motion</b></p>
                     </div> 
                 </Link>
                 <Link href={"/gallary/spa/03"} >
