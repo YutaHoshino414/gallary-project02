@@ -49,3 +49,69 @@
     border-radius: 10px 10px 0 0;
     height: 30px;
 }
+
+/* SPA03 */
+.animateBeach{
+    animation-duration: 2s;
+    animation-name: animeImage;
+}
+/* https://animista.net/play/attention/jello */
+@keyframes animeImage {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+    }
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+                transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+                transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+                transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+                transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+                transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+    }
+}
+
+.animateTitle {
+    animation-duration: 2s;
+    animation-name: animeTitle;
+}
+@keyframes animeTitle{
+    from {
+        transform: translatex(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translatex(0);
+        opacity: 1;
+    }
+}
+.animateText {
+    animation-duration: 2s;
+    animation-name: animeText;
+}
+@keyframes animeText{
+    from {
+        transform: translatey(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translatey(0);
+        opacity: 1;
+    }
+}

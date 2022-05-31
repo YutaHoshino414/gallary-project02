@@ -1,3 +1,4 @@
+/* pages下に配置したところ、deploy errorになるのでcomponents下に移動 */
 const CardList = [
     {
         image: "🍅",

@@ -19,7 +19,7 @@ const Works = ({works}) => {
               <Link href={`/works/${i}`} key={i} >
               <div className={styles.card} >
                 <h3>{work.frontmatter.title}</h3>
-
+                ⚙️
               </div></Link>
             ))}
         </div>

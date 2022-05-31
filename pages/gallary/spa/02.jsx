@@ -9,9 +9,8 @@ const card_wrapper = css`
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #5dafb8;
+    background-color: #6bc4cd;
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 `
 
 const Spa02 = () => {
@@ -66,6 +65,13 @@ const imageAnimate={
         transition:{type:"spring", bounce:0.4, duration: 3}
     }
 }
+const titleAnimate={
+    /* variant name is free */
+    offscreen: {x: 100, opacity: 0},
+    onscreen: {x: 0, opacity: 1,
+        transition:{type:"spring", bounce:0.6, duration: 3}
+    }
+}
 const textAnimate={
     /* variant name is free */
     offscreen: {y: 100, opacity: 0},
@@ -87,7 +93,7 @@ const Card = ({image, h2, p, })=>{
                 variants={imageAnimate}
             >{image} 
             </motion.div>
-                <motion.h2 variants={textAnimate}
+                <motion.h2 variants={titleAnimate}
                 >{h2}</motion.h2>
                 <motion.p variants={textAnimate}
                 >{p}</motion.p>

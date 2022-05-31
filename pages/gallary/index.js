@@ -41,7 +41,7 @@ const Gallary = () => {
                 <Link href={"/gallary/spa/03"} >
                     <div className={styles.card} >
                         SPA03
-                        <p></p>
+                        <p>scroll Animation with <b>Intersection Observer</b></p>
                     </div> 
                 </Link>
             </div>
