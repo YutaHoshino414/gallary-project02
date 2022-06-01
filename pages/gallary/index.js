@@ -47,7 +47,7 @@ const Gallary = () => {
                 <Link href={"/gallary/spa/04"} >
                     <div className={styles.card} >
                         SPA04
-                        <p><b></b></p>
+                        <p>Infinite Scrolling using<b> Intersection Observer</b></p>
                     </div> 
                 </Link>
             </div>
