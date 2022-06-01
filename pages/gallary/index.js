@@ -44,6 +44,12 @@ const Gallary = () => {
                         <p>scroll Animation with <b>Intersection Observer</b></p>
                     </div> 
                 </Link>
+                <Link href={"/gallary/spa/04"} >
+                    <div className={styles.card} >
+                        SPA04
+                        <p><b></b></p>
+                    </div> 
+                </Link>
             </div>
             
         </div>
@@ -51,5 +57,5 @@ const Gallary = () => {
         </>
     );
 }
- 
+
 export default Gallary;
