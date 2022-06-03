@@ -30,6 +30,10 @@
     background-color: #fff;
     border-radius: 10px;
     cursor: pointer;
+    
+}
+.card i{
+    font-size: 30px;
 }
 .inner{
     display: flex;

@@ -87,7 +87,6 @@ const Spa01 = () => {
     const [replay,setReplay] = useState(false);
     
     const handleClick = ()=>{
-        
             tl.current = gsap.timeline()      /* {repeat: 1} */
             .to(q("#play"), {
                 ease:"back.in", 
@@ -125,7 +124,6 @@ const Spa01 = () => {
                 top: 450, 
             })
             ; /* finally semicolon! */
-            
     }
 
     return ( 

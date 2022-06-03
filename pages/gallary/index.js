@@ -58,7 +58,7 @@ const Gallary = () => {
                 <Link href={"/gallary/spa/04"} >
                     <div className={styles.card} >
                         <div className={styles.inner}>
-                            <h3>SPA03</h3>
+                            <h3>SPA04</h3>
                             <h4>Infinite Scrolling using </h4>
                             <b>Intersection Observer<br/> <small>(no Library)</small></b>
                             <p></p>
@@ -69,15 +69,13 @@ const Gallary = () => {
                     <div className={styles.card} >
                         <div className={styles.inner}>
                             <h3>SPA05</h3>
-                            <p><b></b></p>
+                            <h4>parallax Effect <br/>using <b>GSAP ScrollTrigger</b></h4>
                             <p></p>
                         </div>
                     </div> 
                 </Link>
             </div>
-            
         </div>
-        
         </>
     );
 }

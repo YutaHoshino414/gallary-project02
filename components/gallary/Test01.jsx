@@ -41,7 +41,6 @@ const reveal = css`
 
 const Test01 = () => {
     const el = useRef();
-
     useEffect(() => {
         if (typeof window !== "undefined") {
             gsap.registerPlugin(ScrollTrigger)

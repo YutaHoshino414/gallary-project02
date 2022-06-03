@@ -20,7 +20,7 @@ const Works = ({works}) => {
                 <div className={styles.card} >
                   <div className={styles.inner}>
                   <h3>{work.frontmatter.title}</h3>
-                  ⚙️
+                  <i>⚙️</i> 
                   </div>
                 </div>
               </Link>
