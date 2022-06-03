@@ -46,6 +46,10 @@ const photo_section = css`
         height: 100%;
         object-fit: cover;
     }
+    span{
+        color: chocolate;
+        margin: 0 10px;
+    }
 `
 
 const Spa04 = () => {
@@ -85,14 +89,9 @@ const Spa04 = () => {
                 if(num >= 6){
                     observer.unobserve(pageEnd.current)
                 }
-            }
-    },{threshold: 1});
-
-      observer.observe(pageEnd.current)
-
-    }
-
-  },[loading,num])
+            }},{threshold: 1});
+            observer.observe(pageEnd.current)
+        }},[loading,num])
 
 
     return ( 

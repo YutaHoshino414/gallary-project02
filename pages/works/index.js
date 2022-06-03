@@ -17,10 +17,13 @@ const Works = ({works}) => {
         <div className={styles.card_wrapper}>
             {works.map((work,i) => (
               <Link href={`/works/${i}`} key={i} >
-              <div className={styles.card} >
-                <h3>{work.frontmatter.title}</h3>
-                ⚙️
-              </div></Link>
+                <div className={styles.card} >
+                  <div className={styles.inner}>
+                  <h3>{work.frontmatter.title}</h3>
+                  ⚙️
+                  </div>
+                </div>
+              </Link>
             ))}
         </div>
     </div>
