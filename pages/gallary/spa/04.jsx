@@ -5,6 +5,7 @@ import { css } from '@emotion/react';
 const container = css`
     width: 100%;
     min-height: 100vh;
+    padding-top: 200px;
     background: #1c273a;
     position: absolute;
     text-align: center;
@@ -13,14 +14,23 @@ const container = css`
         text-transform: uppercase;
         letter-spacing: 4px;
         color: wheat;
-        margin: 50px 0;
+        margin: 30px 0;
     }
     button{
-        padding: 5px 20px;
-        margin: 10px;
+        padding: 10px 20px;
+        margin: 20px;
+        background-color: wheat;
+        border-style: none;
         cursor: pointer;
     }
     padding-bottom: 100px;
+`
+const header = css`
+    width: 100%;
+    height: 150px;
+    background: #1c273a;
+    position: fixed;
+    top: 0;
 `
 
 const photo_section = css`
@@ -52,11 +62,11 @@ const photo_section = css`
     }
 `
 
+
 const Spa04 = () => {
     const [photos, setPhotos] = useState([])
     const [pageNumber, setPageNumber] = useState(1)
     const [loading, setLoading] = useState(false)
-
 
     const fetchPhotos = async(pageNumber) =>{
         const Access_Key = "VaS3ud1C-0gdW1nw41FbBryaV_Q5obZ04o-3Vi2QC1E"
@@ -96,7 +106,10 @@ const Spa04 = () => {
 
     return ( 
         <div css={container}>
-        <h1>Infinite scrolling react hooks</h1>
+            <div css={header}>
+                <h1>Infinite scrolling react hooks</h1>
+                <p>page <b>{pageNumber}</b></p>
+            </div>
         {photos.map((photo,index) =>(
             <div css={photo_section} key={index}>
                 <img src={photo.urls.small} alt=""/>

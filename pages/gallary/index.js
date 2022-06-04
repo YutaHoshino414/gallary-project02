@@ -69,13 +69,15 @@ const Gallary = () => {
                     <div className={styles.card} >
                         <div className={styles.inner}>
                             <h3>SPA05</h3>
-                            <h4>parallax Effect <br/>using <b>GSAP ScrollTrigger</b></h4>
+                            <h4>Parallax Effect <br/>using <b>GSAP ScrollTrigger</b></h4>
                             <p></p>
                         </div>
                     </div> 
                 </Link>
             </div>
+            
         </div>
+        
         </>
     );
 }
