@@ -10,7 +10,7 @@ import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { motion } from "framer-motion";
-import { homecontainer } from "../../../components/Animations";
+import { covercontainer } from "../../../components/Animations";
 
 
 const section = css`
@@ -126,6 +126,7 @@ const Spa05 = () => {
 
     return ( 
         <>
+        
         <div css={section} ref={el}>
             <img src={bg.src} alt="" id="bg" />
             <h2 id="text">Mountains</h2>
@@ -154,7 +155,7 @@ const Spa05 = () => {
             </p>
             </div>
             <motion.div css={cover}
-                variants={homecontainer}
+                variants={covercontainer}
                 initial="show"
                 animate="hide"
                 exit="show"

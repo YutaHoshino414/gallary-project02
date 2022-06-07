@@ -16,7 +16,7 @@ export const homecontainer = {
     opacity: 0,
     height: 0,
     transition: {
-      duration: 1,
+      duration: 0.75,
       /* delay: 0.3,    */   /* Add from original animations.js */
     },
   },
@@ -96,23 +96,25 @@ export const btns = {
     },
   },
 };
-export const detailcontainer = {
+
+export const covercontainer = {
   hidden: {
     opacity: 0,
-    scale: 0,
-    transition: {
-      duration: 1,
-      delay: 0.3, 
-    },
+    height: 0,
   },
   show: {
-    scale: 1,
+    opacity: 1,
+    height: "100vh",
+/*     transition: {
+      duration: 1,
+    }, */
   },
   hide: {
     opacity: 0,
-    width: 0,
+    height: 0,
     transition: {
       duration: 0.75,
+      delay: 2,       /* Add from original animations.js */
     },
   },
 };
