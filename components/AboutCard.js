@@ -8,7 +8,7 @@ import fire from '../public/fire_ball_icon.svg'
 
 const card = css`
     margin: 50px auto 0;
-	width: 1000px;
+	width: 70%;
 	height: 500px;
 `
 const card__inner = css`
@@ -54,7 +54,7 @@ const AboutCard = () => {
     }
     return ( 
         <div css={card}>
-		<div  css={card__inner}  className={flipped ? "is_flipped":""}>
+		<div  css={card__inner}  className={flipped ? "is_flipped":""} onClick={handleFlip}>
 			<div css={cardFace__front}  className={styles.card__face}>
 				<div css={front_content}>
                     <h2>About</h2><br/>
@@ -92,14 +92,10 @@ const AboutCard = () => {
                         <div className={toggleState === 2 ? "active-content" :styles.content}>
 						kkkkk
 						</div>
-					
 					</div>
 				</div>
 			</div>
 		</div>
-		<button onClick={handleFlip}>
-		<i>⚙️</i> 
-		</button>
 	</div>
     );
 }

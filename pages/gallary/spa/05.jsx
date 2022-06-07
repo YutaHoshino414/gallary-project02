@@ -9,6 +9,9 @@ import { css } from '@emotion/react';
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { motion } from "framer-motion";
+import { homecontainer } from "../../../components/Animations";
+
 
 const section = css`
     width: 100%;
@@ -54,9 +57,14 @@ const sec = css`
         margin-bottom: 10px;
         color: #20496a;
     }
-    p{
-
-    }
+`
+const cover = css`
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+    position: absolute;
+    top: 0;
+    z-index: 1;
 `
 
 const Spa05 = () => {
@@ -145,6 +153,12 @@ const Spa05 = () => {
             Reprehenderit repellat quidem odio, porro mollitia possimus eaque veniam unde optio, vel exercitationem voluptas molestias minus ad harum pariatur accusamus animi sint placeat excepturi! Sit at inventore quos nam dolor.
             </p>
             </div>
+            <motion.div css={cover}
+                variants={homecontainer}
+                initial="show"
+                animate="hide"
+                exit="show"
+            ></motion.div>
         </>
     );
 }

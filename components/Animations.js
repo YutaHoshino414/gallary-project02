@@ -9,14 +9,14 @@ export const homecontainer = {
     opacity: 1,
     height: "100vh",
     transition: {
-      duration: 0.75,
+      duration: 1,
     },
   },
   hide: {
     opacity: 0,
     height: 0,
     transition: {
-      duration: 0.75,
+      duration: 1,
       /* delay: 0.3,    */   /* Add from original animations.js */
     },
   },

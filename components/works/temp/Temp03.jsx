@@ -9,7 +9,7 @@ import Split from 'react-split';
 const split = css`
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 70%;
     height: 65%;
     border-radius: 10px;
     margin-right: 100px;

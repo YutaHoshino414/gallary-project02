@@ -6,7 +6,7 @@ import hljs from 'highlight.js/lib/core';
 
 const wrap = css`
     margin-right: 100px;
-    width: 100%;
+    width: 70%;
     height:70%;
 
 `

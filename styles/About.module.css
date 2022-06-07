@@ -18,16 +18,6 @@
     z-index: 1;
 }
 
-.fire{
-    position: absolute;
-    left: 150px;
-    bottom: 100px;
-    filter: grayscale(100%);
-    cursor: pointer;
-}
-.fire:hover{filter: grayscale(0%);}
-
-
 /* flip card */
 .card__face {
 	position: absolute;
