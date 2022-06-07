@@ -5,15 +5,15 @@ import Link from 'next/link';
 const section = css`
     position: absolute;
     right: 0;
-    width: 180px;
-    height: 90%;
+    width: 200px;
+    height: 100%;
     background-color: rgba(255,255,255, 0.1);
     box-shadow: 0px 10px 20px rgba(0,0,0, 0.3);
 `
 const header = css`
     height: 80px;
     padding: 10px;
-    color: #4a567e;
+    color: #ffffff;
 `;
 const item_list = css`
     overflow: scroll;
@@ -23,7 +23,7 @@ const item_list = css`
 const item = css`
     width: 90%;
     height: 100px;
-    background-color: #88888885;
+    background-color: #ffffffda;
     margin: 10px;
     padding: 10px;
     cursor: pointer;

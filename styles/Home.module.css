@@ -34,6 +34,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(to top,#b9c6d2 0%,#d0dde9 10.45%,#edf0f8 41.35%); 
 }
 
 .main{
@@ -43,3 +44,13 @@
     height: 50%;
     color: aliceblue;
 }
+
+.home button {
+    border: none;
+    background-color: gray;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+  }

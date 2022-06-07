@@ -13,8 +13,8 @@ const Gallary = () => {
         <div className={styles.gallary}>
             <div className={styles.title}>
                 <h1>Gallary</h1>  
-            </div>
-            <h2>ALL</h2>
+            </div><br/>
+            {/* <h2>ALL</h2> */}
             <div className={styles.card_wrapper}>
             {gallaries.map((gallary, i)=>(
                 <Link href={`/gallary/${gallary.id}`} key={i} >
@@ -25,8 +25,8 @@ const Gallary = () => {
                     </div>
                 </div></Link>
             ))}
-            </div><hr/><br/>
-            <h2>SPA <small>(Single Page App)</small></h2>
+            </div><br/><br/>
+            {/* <h2>SPA <small>(Single Page App)</small></h2> */}
             <div className={styles.card_wrapper}>
                 <Link href={"/gallary/spa/01"} >
                     <div className={styles.card} >

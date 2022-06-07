@@ -3,7 +3,8 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
-
+import { motion } from "framer-motion";
+import { homecontainer, homeh2, homebtn,cards, card } from "../../components/Animations";
 
 const Works = ({works}) => {
   console.log(works)
@@ -11,22 +12,35 @@ const Works = ({works}) => {
     return ( 
         <div className={styles.works}>
           <div className={styles.title}>
-            <h1>Works</h1>
+            <motion.h1 variants={homeh2}
+              initial="hidden"
+              animate="show"
+              exit="hide"
+            >Works</motion.h1>
+            <motion.h2 variants={homeh2}
+              initial="hidden"
+              animate="show"
+              exit="hide"
+            >ALL</motion.h2>
           </div>
-          <h2>ALL</h2>
-        <div className={styles.card_wrapper}>
-            {works.map((work,i) => (
-              <Link href={`/works/${i}`} key={i} >
-                <div className={styles.card} >
-                  <div className={styles.inner}>
-                  <h3>{work.frontmatter.title}</h3>
-                  <i>⚙️</i> 
-                  </div>
-                </div>
-              </Link>
-            ))}
+          <motion.div className={styles.card_wrapper} 
+            variants={cards} 
+            initial="hidden"
+            animate="show"
+            exit="hide"
+          >
+              {works.map((work,i) => (
+                <Link href={`/works/${i}`} key={i} >
+                  <motion.div className={styles.card} variants={card} >
+                    <div className={styles.inner}>
+                    <h3>{work.frontmatter.title}</h3>
+                    <i>⚙️</i> 
+                    </div>
+                  </motion.div>
+                </Link>
+              ))}
+          </motion.div>
         </div>
-    </div>
     );
 }
 

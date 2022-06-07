@@ -6,7 +6,7 @@ import Markdown from 'markdown-to-jsx';
 import { motion, Variants } from "framer-motion";
 import CompSelect from '../../components/works/CompSelect';
 import styles from '../../styles/Works.module.css'
-
+import { homecontainer, detailcontainer } from "../../components/Animations";
 import hljs from 'highlight.js/lib/core';
 // ハイライトしたい言語
 import javascript from 'highlight.js/lib/languages/javascript';
@@ -23,10 +23,17 @@ hljs.registerLanguage('javascript',javascript);
 hljs.registerLanguage('xml',html);
 hljs.registerLanguage('css',csshl);
 
+const container = css`
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top,#b9c6d2 0%,#d0dde9 10.45%,#edf0f8 41.35%);
+    z-index: 1;
+`;
 const title = css`
     position: absolute;
     top: 40px;
-    left:   10%;
+    left:   20%;
     color: #4a567e;
     font-size: 22px;
 `;
@@ -43,16 +50,20 @@ const Work = ({markdown, mdFilesWithData}) => {
             <div css={title}>
                 <h2>{markdown.data.title}</h2>
             </div>
+            <motion.div
+                className={styles.detail_main}
+                variants={homecontainer}
+                initial="hidden"
+                animate="show"
+                exit="hide"
+            >
                 <CompSelect path={markdown.data.id} />
-                {/* <Markdown >
-                    {markdown.content}
-                </Markdown> */}
+            </motion.div>
+            <SideList mdlist={mdFilesWithData} />
+        </div>
         <Link href="/works">
             <button className={styles.btn}>一覧に戻る</button>
         </Link>
-        <SideList mdlist={mdFilesWithData} />
-        </div>
-        
         </>
     );
 }

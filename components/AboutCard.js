@@ -98,7 +98,7 @@ const AboutCard = () => {
 			</div>
 		</div>
 		<button onClick={handleFlip}>
-			<img src={fire.src} width={100} className={styles.fire} />
+		<i>⚙️</i> 
 		</button>
 	</div>
     );
