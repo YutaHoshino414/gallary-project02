@@ -2,7 +2,7 @@ import CardList from '../../../components/gallary/CardList';
 /** @jsxImportSource @emotion/react */ 
 import { css } from '@emotion/react';
 import { motion, Variants } from "framer-motion";
-
+import StaggerAnime01 from '../../../components/StaggerAnime01';
 
 const card_wrapper = css`
     min-height: 100vh;
@@ -24,6 +24,7 @@ const Spa02 = () => {
                 <Card image={item.image} h2={item.h2} p={item.p} />
             </div>
         ))}
+        <StaggerAnime01/>
         </>
     );
 }

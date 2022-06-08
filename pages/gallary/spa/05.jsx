@@ -9,8 +9,7 @@ import { css } from '@emotion/react';
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { motion } from "framer-motion";
-import { covercontainer } from "../../../components/Animations";
+import StaggerAnime01 from '../../../components/StaggerAnime01';
 
 
 const section = css`
@@ -154,12 +153,7 @@ const Spa05 = () => {
             Reprehenderit repellat quidem odio, porro mollitia possimus eaque veniam unde optio, vel exercitationem voluptas molestias minus ad harum pariatur accusamus animi sint placeat excepturi! Sit at inventore quos nam dolor.
             </p>
             </div>
-            <motion.div css={cover}
-                variants={covercontainer}
-                initial="show"
-                animate="hide"
-                exit="show"
-            ></motion.div>
+            <StaggerAnime01/>
         </>
     );
 }
